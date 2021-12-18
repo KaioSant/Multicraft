@@ -1,10 +1,29 @@
 #!/bin/bash
 
-echo "=============================================="
-echo "script criado por Kaio santos"
-echo ""
-echo "iniciando a instalação! por favor, aguarde...."
-echo "=============================================="
+clear
+
+menu="
+0)Inicializar a instalação
+1)Recusar Instalação
+2)Informações do script"
+
+echo "$menu"
+
+ini="Inicializando instalação....."
+recu="Script Cancelado com sucesso!"
+
+
+info="==============================================
+Script Criado por kaio santos
+Script versão: 0.1
+Github do kaio: https://github.com/KaioSant
+=============================================="
+
+read -p "Escolha uma Opção" OPCAO
+
+case "$OPCAO" in
+      0)
+      echo ""
 echo "> vamos instalar o apache..."
 sudo apt update
 sudo apt install apache2
@@ -30,3 +49,17 @@ wget http://www.multicraft.org/download/linux64 -O multicraft.tar.gz
 tar xvzf multicraft.tar.gz
 cd multicraft
 ./setup.sh
+      ;;
+      
+      1)
+      echo "$recu"
+      exit;
+      ;;
+      2)
+      echo "$info"
+      ;;
+      *)
+      echo "Opção $OPCAO desconhecida!"
+      exit 1
+      ;;
+esac
