@@ -1,25 +1,21 @@
 #!/bin/bash
 
-output(){
-    echo -e '\e[36m'$1'\e[0m';
-}
-
-menu="
+menu="\e[36m'
 0)Inicializar a instalação
 1)Recusar Instalação
-2)Informações do script"
+2)Informações do script'\e[0m"
 
 echo "$menu"
 
-ini="Inicializando instalação....."
+ini="\e[36m'Inicializando instalação.....'\e[0m"
 recu="Script Cancelado com sucesso!"
 
-
-info="==============================================
+info="\e[36m'
+==============================================
 Script Criado por kaio santos
 Script versão: 0.1
 Github do kaio: https://github.com/KaioSant
-=============================================="
+=============================================='\e[0m"
 
 read -p "Escolha uma Opção: " OPCAO
 
