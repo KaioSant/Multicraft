@@ -17,7 +17,7 @@ info1="Script Criado por kaio santos"
 info2="Script versão: 0.1"
 info3="Github do kaio: https://github.com/KaioSant"
 
-read 'Escolha uma Opção: ' OPCAO
+read -p 'Escolha uma Opção: ' OPCAO
 
 case "$OPCAO" in
       0)
