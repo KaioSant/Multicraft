@@ -1,11 +1,12 @@
 #!/bin/bash
 
-menu="
-0)Inicializar a instalação
-1)Recusar Instalação
-2)Informações do script"
+menu1="0)Inicializar a instalação"
+menu2="1)Recusar Instalação"
+menu3="2)Informações do script"
 
-echo -e '\e[36m'$menu'\e[0m';
+echo -e '\e[36m'$menu1'\e[0m';
+echo -e '\e[36m'$menu2'\e[0m';
+echo -e '\e[36m'$menu3'\e[0m';
 
 ini="Inicializando instalação....."
 recu="Script Cancelado com sucesso!"
@@ -14,7 +15,7 @@ info1="Script Criado por kaio santos"
 info2="Script versão: 0.1"
 info3="Github do kaio: https://github.com/KaioSant"
 
-read -p "Escolha uma Opção: " OPCAO
+echo -p '\e[36m'Escolha uma Opção: '\e[0m'; OPCAO
 
 case "$OPCAO" in
       0)
