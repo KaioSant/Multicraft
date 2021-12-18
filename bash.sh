@@ -22,34 +22,30 @@ read -p 'Escolha uma Opção: ' OPCAO
 case "$OPCAO" in
       0)
       echo ""
-echo "> vamos instalar o Nginx"
-sudo apt update
-sudo apt install nginx
-sudo ufw app list
-sudo ufw allow 'Nginx HTTP'
-sudo ufw status
-systemctl status nginx
-curl -4 icanhazip.com
-echo "> Servidor Nginx instalado com sucesso! entre com seu subdominio para confirmar."
-echo "instalando o curl & e verificando com icanhazip"
-sudo apt install curl
-curl http://icanhazip.com
-echo "> instalado com sucesso. Agora vamos instalar o MySQL!"
-sudo apt install mysql-server
-sudo mysql_secure_installation
-sudo exit
-echo "> Vamos instalar o seu PHP, por favor aguarde."
-sudo apt install php libapache2-mod-php php-mysql
-
-
-echo "> A parte web foi instalada com sucesso, vamos instalar seu painel agora."
-
-sudo wget http://www.multicraft.org/download/linux64 -O multicraft.tar.gz
-tar xvzf multicraft.tar.gz
-cd multicraft
-./setup.sh
+      echo "> vamos instalar o Nginx"
+      sudo apt update
+      sudo apt install nginx
+      sudo ufw app list
+      sudo ufw allow 'Nginx HTTP'
+      sudo ufw status
+      systemctl status nginx
+      curl -4 icanhazip.com
+      echo "> Servidor Nginx instalado com sucesso! entre com seu subdominio para confirmar."
+      echo "instalando o curl & e verificando com icanhazip"
+      sudo apt install curl
+      curl http://icanhazip.com
+      echo "> instalado com sucesso. Agora vamos instalar o MySQL!"
+      sudo apt install mysql-server
+      sudo mysql_secure_installation
+      sudo exit
+      echo "> Vamos instalar o seu PHP, por favor aguarde."
+      sudo apt install php libapache2-mod-php php-mysql
+      echo "> A parte web foi instalada com sucesso, vamos instalar seu painel agora."
+      sudo wget http://www.multicraft.org/download/linux64 -O multicraft.tar.gz
+      tar xvzf multicraft.tar.gz
+      cd multicraft
+      ./setup.sh
       ;;
-      
       1)
       echo -e '\e[36m'$recu'\e[0m';
       exit;
