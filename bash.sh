@@ -22,12 +22,14 @@ read -p 'Escolha uma Opção: ' OPCAO
 case "$OPCAO" in
       0)
       echo ""
-echo "> vamos instalar o apache..."
+echo "> vamos instalar o Nginx"
 sudo apt update
-sudo apt install apache2
+sudo apt install nginx
 sudo ufw app list
-sudo ufw app info "Apache Full"
-sudo ufw allow "Apache Full"
+sudo ufw allow 'Nginx HTTP'
+sudo ufw status
+systemctl status nginx
+curl -4 icanhazip.com
 echo "> Servidor Apache2 instalado com sucesso! entre com seu subdominio para confirmar."
 echo "instalando o curl & e verificando com icanhazip"
 sudo apt install curl
