@@ -24,9 +24,8 @@ case "$OPCAO" in
       echo ""
       echo "> vamos instalar o Nginx"
       sudo apt update
-      sudo apt install nginx
-      sudo ufw app list
-      sudo ufw allow 'Nginx HTTP'
+      sudo apt install apache2
+      sudo ufw allow 'Apache'
       echo "> Servidor Nginx instalado com sucesso! entre com seu subdominio para confirmar."
       echo "instalando o curl & e verificando com icanhazip"
       sudo apt install curl
