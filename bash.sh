@@ -1,16 +1,16 @@
 #!/bin/bash
 
-menu=echo -e "\e[36m'
+menu="
 0)Inicializar a instalação
 1)Recusar Instalação
-2)Informações do script'\e[0m"
+2)Informações do script"
 
 echo "$menu"
 
-ini=echo -e "\e[36m'Inicializando instalação.....'\e[0m"
+ini="Inicializando instalação....."
 recu="Script Cancelado com sucesso!"
 
-info=echo -e "\e[36m'
+info="
 ==============================================
 Script Criado por kaio santos
 Script versão: 0.1
@@ -50,14 +50,15 @@ cd multicraft
       ;;
       
       1)
-      echo "$recu"
+      echo -e '\e[36m'$recu'\e[0m';
       exit;
       ;;
       2)
-      echo "$info"
+      echo -e '\e[36m'$info'\e[0m';
       ;;
       *)
-      echo "Opção $OPCAO desconhecida!"
+      echo -e '\e[36m'Opção $OPCAO desconhecida!'\e[0m';
       exit 1
       ;;
 esac
+$1
