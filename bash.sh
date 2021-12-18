@@ -1,6 +1,6 @@
 #!/bin/bash
 
-menu="\e[36m'
+menu=output "\e[36m'
 0)Inicializar a instalação
 1)Recusar Instalação
 2)Informações do script'\e[0m"
