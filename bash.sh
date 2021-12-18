@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#script criado por caio santos!
+
 menu1="0)Inicializar a instalação"
 menu2="1)Recusar Instalação"
 menu3="2)Informações do script"
