@@ -17,7 +17,7 @@ info1="Script Criado por kaio santos"
 info2="Script versão: 0.1"
 info3="Github do kaio: https://github.com/KaioSant"
 
-echo -p '\e[36m'Escolha uma Opção: '\e[0m'; OPCAO
+read 'Escolha uma Opção: ' OPCAO
 
 case "$OPCAO" in
       0)
