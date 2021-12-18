@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "=============================================="
 echo "script criado por Kaio santos"
 echo ""
