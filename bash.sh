@@ -30,7 +30,7 @@ sudo ufw allow 'Nginx HTTP'
 sudo ufw status
 systemctl status nginx
 curl -4 icanhazip.com
-echo "> Servidor Apache2 instalado com sucesso! entre com seu subdominio para confirmar."
+echo "> Servidor Nginx instalado com sucesso! entre com seu subdominio para confirmar."
 echo "instalando o curl & e verificando com icanhazip"
 sudo apt install curl
 curl http://icanhazip.com
@@ -44,8 +44,7 @@ sudo apt install php libapache2-mod-php php-mysql
 
 echo "> A parte web foi instalada com sucesso, vamos instalar seu painel agora."
 
-cd /var/www/html/
-wget http://www.multicraft.org/download/linux64 -O multicraft.tar.gz
+sudo wget http://www.multicraft.org/download/linux64 -O multicraft.tar.gz
 tar xvzf multicraft.tar.gz
 cd multicraft
 ./setup.sh
