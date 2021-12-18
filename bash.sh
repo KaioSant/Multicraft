@@ -61,4 +61,3 @@ cd multicraft
       exit 1
       ;;
 esac
-$1
