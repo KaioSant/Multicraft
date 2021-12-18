@@ -21,7 +21,7 @@ Script versão: 0.1
 Github do kaio: https://github.com/KaioSant
 =============================================="
 
-output "Escolha uma Opção: " OPCAO
+read -p "Escolha uma Opção: " OPCAO
 
 case "$OPCAO" in
       0)
